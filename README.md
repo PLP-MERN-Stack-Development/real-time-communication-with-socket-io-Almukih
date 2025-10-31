@@ -75,3 +75,35 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 - [React Documentation](https://react.dev/)
 - [Express.js Documentation](https://expressjs.com/)
 - [Building a Chat Application with Socket.io](https://socket.io/get-started/chat) 
+
+## Changes made by assistant (updated version)
+
+Implemented a working Socket.io server (server/server.js) that:
+- Accepts username-based login
+- Maintains an in-memory user list and basic presence
+- Implements rooms (join/leave), global chat room
+- Stores messages in-memory and provides simple pagination endpoint
+- Supports typing indicator, private messages, reactions, read receipts
+- Provides REST endpoints to fetch users and room messages
+
+Added a Vite + React client skeleton (client/) that:
+- Connects to the Socket.io server
+- Performs simple username login, joins "global" room
+- Displays messages with sender and timestamp
+- Shows typing indicators and basic user list
+- Plays a short notification (attempts) on new messages
+
+How to run:
+1. Server:
+   cd server
+   npm install
+   npm run dev
+
+2. Client:
+   cd client
+   npm install
+   npm run dev
+
+Notes:
+- This is a learning/demo implementation. It uses in-memory stores (not for production).
+- You can extend the client to add private messaging UI, file uploads, message search, etc.

@@ -1,0 +1,2 @@
+const { v4: uuidv4 } = require('uuid');
+class MessageStore { constructor(){ this.rooms = {}; } add(room, msg){ this.rooms[room]=this.rooms[room]||[]; this.rooms[room].push(msg); if(this.rooms[room].length>2000) this.rooms[room].shift(); } list(room,page=1,pageSize=50){ const arr=this.rooms[room]||[]; const start=Math.max(0, arr.length-page*pageSize); const end=Math.max(0, arr.length-(page-1)*pageSize); return arr.slice(start,end); } find(room,id){ const arr=this.rooms[room]||[]; return arr.find(m=>m.id===id); } } module.exports = new MessageStore();

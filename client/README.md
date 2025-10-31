@@ -1,0 +1,1 @@
+Client app (Vite + React). Run `npm install` and `npm run dev`.

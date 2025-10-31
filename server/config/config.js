@@ -1,0 +1,1 @@
+module.exports = { DEFAULT_ROOM: 'global', MESSAGE_PAGE_SIZE: 50 };

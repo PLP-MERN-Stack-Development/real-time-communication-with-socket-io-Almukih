@@ -1,0 +1,1 @@
+Server folder with socket/io, controllers, models, config, utils. Run `npm install` and `npm run dev`.

@@ -1,0 +1,1 @@
+const messages = require('../models/message'); const { ts } = require('../utils/time'); exports.handleSendMessage = ({ room, from, text }) => { const msg = { id: Date.now().toString() + '::' + Math.random().toString(36).slice(2,8), room, from, text, ts: ts(), reactions: {}, readBy: [] }; messages.add(room, msg); return msg; };
